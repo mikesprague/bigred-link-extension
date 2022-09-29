@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import dompurify from 'dompurify';
 
+import { db } from '../modules/db.js';
+
 import './Main.scss';
 
 export const Main = () => {
@@ -16,7 +18,7 @@ export const Main = () => {
       method: 'POST',
       data: { link: longUrl },
     })
-      .then((response) => `https://bigred.link/${response.data.short_id}`)
+      .then((response) => response.data)
       .catch((error) => console.error(error));
 
     return returnData;
@@ -27,8 +29,8 @@ export const Main = () => {
       return;
     }
 
-    chrome.tabs.query({ active: true, index: 0 }, async (tabs) => {
-      const [activeTab] = tabs;
+    chrome.tabs.query({ active: true }, async (tabs) => {
+      const activeTab = tabs[0];
 
       console.log(activeTab);
 
@@ -36,14 +38,33 @@ export const Main = () => {
         const { favIconUrl: tabFavIconUrl, url: tabUrl } = activeTab;
 
         if (tabUrl.startsWith('http')) {
+          let shortUrlData;
           let shortUrl;
 
-          // TODO: check storage for url
+          // check storage for url
+          try {
+            [shortUrlData] = await db.shortened_links
+              .where('original_url')
+              .equalsIgnoreCase(tabUrl)
+              .toArray();
+            // console.log('shortUrlData', shortUrlData);
+            shortUrl = `https://bigred.link/${shortUrlData.short_id}`;
+          } catch (error) {
+            // console.log('no data for this url');
+          }
 
           if (!shortUrl) {
-            shortUrl = await getShortUrl(tabUrl);
+            shortUrlData = await getShortUrl(tabUrl);
+            shortUrl = `https://bigred.link/${shortUrlData.short_id}`;
             // console.log('new data fetched');
-            // TODO: add url and short code to storage
+
+            // add url and short code to storage
+            const dexieData = await db.shortened_links.add({
+              original_url: tabUrl,
+              short_id: shortUrlData.short_id,
+            });
+
+            // console.log('dexieDataPostInsert', dexieData);
           }
 
           // console.log(shortUrl);
