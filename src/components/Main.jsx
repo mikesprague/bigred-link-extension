@@ -10,13 +10,11 @@ import './Main.scss';
 export const Main = () => {
   const [link, setLink] = useState('');
 
-  const getShortUrl = async (fullUrl) => {
-    const data = { link: fullUrl };
-
+  const getShortUrl = async (longUrl) => {
     const returnData = await axios({
       url: 'https://bigred.link/api/new-shortlink',
       method: 'POST',
-      data,
+      data: { link: longUrl },
     })
       .then((response) => `https://bigred.link/${response.data.short_id}`)
       .catch((error) => console.error(error));
@@ -29,44 +27,52 @@ export const Main = () => {
       return;
     }
 
+    chrome.tabs.query({ active: true, index: 0 }, async (tabs) => {
+      const [activeTab] = tabs;
 
-    chrome.tabs.query({ active: true }, async (tabs) => {
-      // console.log(tabs[0]);
+      console.log(activeTab);
 
-      if (tabs[0] && tabs[0].url) {
-        const fullUrl = tabs[0].url;
+      if (activeTab && activeTab.url) {
+        const { favIconUrl: tabFavIconUrl, url: tabUrl } = activeTab;
 
-        if (fullUrl.startsWith('http')) {
-          console.log('i ran');
-
+        if (tabUrl.startsWith('http')) {
           let shortUrl;
 
-          chrome.storage.local.get([fullUrl], (result) => {
-            console.log('value in storage for ', fullUrl, result.key);
-
-            if (result.key) {
-              shortUrl = result.key;
-            }
-          });
+          // TODO: check storage for url
 
           if (!shortUrl) {
-            shortUrl = await getShortUrl(fullUrl);
-            console.log('new data fetched');
+            shortUrl = await getShortUrl(tabUrl);
+            // console.log('new data fetched');
+            // TODO: add url and short code to storage
           }
-
 
           // console.log(shortUrl);
           navigator.clipboard.writeText(dompurify.sanitize(shortUrl));
-          chrome.storage.local.set({fullUrl: shortUrl}, () => {
-            console.log('value set in storage', fullUrl, shortUrl);
-          });
 
           const shortLinkMarkup = (
-            <p id="short-link">
-              {dompurify.sanitize(shortUrl)}
-              <br />
-              <small><em>(copied to clipboard)</em></small>
-            </p>
+            <div className="mx-auto">
+              <div className="flex flex-row">
+                <div className="flex">
+                  <img
+                    className="h-4 rounded mr-2 mt-1"
+                    src={tabFavIconUrl}
+                    alt="favicon"
+                  />
+                </div>
+                <div className="flex flex-grow whitespace-nowrap overflow-clip">
+                  {tabUrl}
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="short-link">
+                  {dompurify.sanitize(shortUrl)}
+                  <br />
+                  <small>
+                    <em>copied to clipboard</em>
+                  </small>
+                </div>
+              </div>
+            </div>
           );
 
           setLink(shortLinkMarkup);
@@ -78,8 +84,6 @@ export const Main = () => {
   }, [link]);
 
   return (
-    <main>
-      {link || <FontAwesomeIcon icon="fa-solid fa-spinner" spin />}
-    </main>
+    <main>{link || <FontAwesomeIcon icon="fa-solid fa-spinner" spin />}</main>
   );
 };

@@ -1,11 +1,12 @@
 main {
-  #short-link {
+  .short-link {
     margin: unset;
+    @apply text-base;
 
     small {
       font-size: 75%;
-      position: relative;
-      top: -0.5rem;
+      // position: relative;
+      // top: -0.5rem;
     }
   }
 }

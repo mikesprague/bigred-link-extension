@@ -10,24 +10,26 @@
   "scripts": {
     "build": "vite build",
     "clean": "rm -rf ./build",
-    "dev": "vite serve",
+    "dev": "vite build --watch --mode development --sourcemap",
     "prebuild": "npm run clean",
+    "prestart": "npm run clean",
     "preview": "vite preview",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "zip": "cd public && zip -r bigredlink-extension.zip ./"
+    "zip": "cd public && zip -r bigred-link-extension.zip ./"
   },
   "keywords": [],
   "repository": {
-    "url": "https://github.com/mikesprague/bigredlink-extension"
+    "url": "https://github.com/mikesprague/bigred-link-extension"
   },
   "author": {
     "name": "Michael Sprague",
     "email": "mikesprague@gmail.com"
   },
-  "homepage": "https://github.com/mikesprague/bigredlink-extension",
+  "homepage": "https://github.com/mikesprague/bigred-link-extension",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikesprague/bigredlink-extension/issues"
+    "url": "https://github.com/mikesprague/bigred-link-extension/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.2.0",
