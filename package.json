@@ -10,15 +10,15 @@
   },
   "scripts": {
     "build": "vite build",
-    "build-extension": "npm run build && npm run zip",
     "clean": "rm -rf ./build",
     "dev": "vite build --watch --mode development --sourcemap",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
     "preview": "vite preview",
+    "prezip": "npm run build",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "zip": "cd public && zip -r bigred-link-extension.zip ./"
+    "zip": "cd build && zip -r bigred-link-extension.zip ./"
   },
   "keywords": [],
   "repository": {
