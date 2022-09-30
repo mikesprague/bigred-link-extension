@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-undef
 const colors = require('tailwindcss/colors');
 
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     './src/index.html',
@@ -50,7 +52,7 @@ module.exports = {
         'orange-large-text': '#d47500',
         'red-graphics': '#ef4035',
         'red-text': '#df1e12',
-        'reen-text': '#4b7b2b',
+        'green-text': '#4b7b2b',
         'sea-grey': '#9fad9f',
       },
     },

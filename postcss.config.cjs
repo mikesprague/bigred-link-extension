@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable no-undef */
 const cssSafelistClassArray = [
   /result-section/,
   /result/,
@@ -7,6 +9,7 @@ const cssSafelistClassArray = [
   /start-over-link/,
 ];
 
+// eslint-disable-next-line no-undef
 module.exports = {
   plugins: [
     require('autoprefixer'),
