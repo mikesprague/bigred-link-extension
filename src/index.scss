@@ -20,9 +20,9 @@
 
 html,
 body {
-  @apply bg-gradient-to-br to-red-text from-carnellian;
-  // @apply bg-carnellian;
-  @apply text-white;
+  // @apply bg-gradient-to-br to-red-text from-carnellian;
+  @apply bg-carnellian;
+  @apply text-light-grey;
   @apply font-sans;
   @apply h-48;
   @apply w-96;

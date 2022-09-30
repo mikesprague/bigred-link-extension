@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export const ShortLink = ({ favIconUrl, longUrl, shortUrl }) => (
-  <div className="mx-auto">
-    <div className="flex flex-row">
-      <div className="flex">
-        <img className="h-4 rounded mr-2 mt-1" src={favIconUrl} alt="favicon" />
+  <div className="mx-4 p-4 bg-dark-grey rounded bg-opacity-25">
+    <div className="flex flex-row border border-dark-grey border-solid rounded">
+      <div className="flex bg-dark-grey min-w-fit w-auto bg-opacity-75">
+        <img className="h-4 rounded m-2" src={favIconUrl} alt="favicon" />
       </div>
-      <div className="flex flex-grow whitespace-nowrap overflow-clip">
+      <div className="long-url">
         {longUrl}
       </div>
     </div>

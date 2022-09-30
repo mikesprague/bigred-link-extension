@@ -1,10 +1,56 @@
 main {
+  @apply flex-grow;
+  @apply text-center;
+  @apply pb-4;
+  @apply w-full;
+
+  .long-url {
+    @apply flex;
+    @apply flex-grow;
+    @apply whitespace-nowrap;
+    @apply overflow-auto;
+    @apply text-xs;
+    @apply px-2;
+    @apply bg-dark-grey;
+    @apply bg-opacity-50;
+    @apply leading-8;
+
+    scrollbar-width: 0.125rem;
+    scrollbar-color: #333;
+
+    &::-webkit-scrollbar {
+      @apply w-0.5;
+      @apply h-0.5;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply rounded-full;
+      @apply bg-gray-700;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-700;
+      @apply border-2 border-sea-grey;
+      @apply rounded-full;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-gray-700;
+    }
+  }
+
   .short-link {
-    margin: unset;
+    @apply mt-2;
     @apply text-base;
+    @apply font-sans;
+    @apply w-full;
+    @apply text-center;
+    @apply font-bold;
 
     small {
-      font-size: 75%;
+      @apply text-xs;
+      @apply font-normal;
+
       // position: relative;
       // top: -0.5rem;
     }
