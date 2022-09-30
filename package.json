@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "build-extension": "npm run build && npm run zip",
     "clean": "rm -rf ./build",
     "dev": "vite build --watch --mode development --sourcemap",
     "prebuild": "npm run clean",
@@ -41,7 +42,6 @@
     "axios": "0.27.2",
     "clipboard-polyfill": "4.0.0-rc1",
     "dexie": "3.2.2",
-    "dexie-react-hooks": "1.1.1",
     "dayjs": "1.11.5",
     "dompurify": "2.4.0",
     "nanoid": "4.0.0",
