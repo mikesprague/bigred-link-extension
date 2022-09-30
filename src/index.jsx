@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import { App } from './components/App';
 
-import { initIcons } from './modules/helpers.jsx';
+import { initIcons } from './modules/helpers.js';
 
 import './index.scss';
 
