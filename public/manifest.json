@@ -12,11 +12,8 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "permissions": [
-    "activeTab",
-    "clipboardRead",
+    "tabs",
     "clipboardWrite",
-    "contextMenus",
-    "storage",
     "unlimitedStorage"
   ],
   "action": {
