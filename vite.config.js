@@ -11,7 +11,7 @@ export default defineConfig({
   publicDir: '../public',
   base: './',
   outDir: './',
-  appType: 'spa',
+  appType: 'mpa',
   plugins: [
     react({
       include: '**/*.{jsx,tsx}',
