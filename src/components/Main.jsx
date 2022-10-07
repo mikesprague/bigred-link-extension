@@ -21,7 +21,7 @@ export const Main = () => {
       if (activeTab && activeTab.url) {
         const { favIconUrl: tabFavIconUrl, url: tabUrl } = activeTab;
 
-        if (tabUrl.startsWith('http')) {
+        if (tabUrl.startsWith('https')) {
           let shortUrl;
           let shortUrlData;
 
@@ -59,7 +59,7 @@ export const Main = () => {
             />,
           );
         } else {
-          setShortLinkMarkup('brl-ext only works on http/https pages');
+          setShortLinkMarkup('The BigRed.link Browser Extension only works on https pages');
         }
       }
     });
