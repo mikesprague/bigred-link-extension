@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier-scss'],
+  extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
   rules: {
     'scss/at-rule-no-unknown': [
       true,
