@@ -1,3 +1,4 @@
+import * as clipboard from 'clipboard-polyfill';
 import React, { lazy, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import dompurify from 'dompurify';
@@ -47,9 +48,6 @@ export const Main = () => {
 
           // console.log(shortUrl);
 
-          // write short link to clipboard
-          navigator.clipboard.writeText(dompurify.sanitize(shortUrl));
-
           // add short link markup to extension popup
           setShortLinkMarkup(
             <ShortLink
@@ -58,8 +56,13 @@ export const Main = () => {
               shortUrl={shortUrl}
             />,
           );
+
+          // write short link to clipboard
+          clipboard.writeText(dompurify.sanitize(shortUrl));
         } else {
-          setShortLinkMarkup('The BigRed.link Browser Extension only works on https pages');
+          setShortLinkMarkup(
+            'The BigRed.link Browser Extension only works on https pages',
+          );
         }
       }
     });
