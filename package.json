@@ -170,9 +170,9 @@
       "jsx-a11y/no-onchange": "off",
       "import/prefer-default-export": "off",
       "no-console": "warn",
-      "node/no-unpublished-import": "warn",
-      "node/no-missing-import": "warn",
-      "node/no-unsupported-features/es-syntax": "off",
+      "n/no-unpublished-import": "warn",
+      "n/no-missing-import": "warn",
+      "n/no-unsupported-features/es-syntax": "off",
       "import/extensions": "off",
       "import/no-extraneous-dependencies": "off"
     }
