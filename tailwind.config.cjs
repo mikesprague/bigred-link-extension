@@ -1,7 +1,5 @@
-// eslint-disable-next-line no-undef
 const colors = require('tailwindcss/colors');
 
-// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     './src/index.html',

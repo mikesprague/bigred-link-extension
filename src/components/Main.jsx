@@ -1,10 +1,10 @@
-import * as clipboard from 'clipboard-polyfill';
-import React, { lazy, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as clipboard from 'clipboard-polyfill';
 import dompurify from 'dompurify';
+import React, { lazy, useEffect, useState } from 'react';
 
-import { buildShortLink, createShortUrl } from '../modules/helpers.js';
 import { insertLongUrl, queryForLongUrl } from '../modules/db.js';
+import { buildShortLink, createShortUrl } from '../modules/helpers.js';
 
 import './Main.scss';
 
@@ -19,7 +19,7 @@ export const Main = () => {
       const activeTab = tabs[0];
       // console.log(activeTab);
 
-      if (activeTab && activeTab.url) {
+      if (activeTab?.url) {
         const { favIconUrl: tabFavIconUrl, url: tabUrl } = activeTab;
 
         if (tabUrl.startsWith('https')) {
@@ -54,14 +54,14 @@ export const Main = () => {
               favIconUrl={tabFavIconUrl}
               longUrl={tabUrl}
               shortUrl={shortUrl}
-            />,
+            />
           );
 
           // write short link to clipboard
           clipboard.writeText(dompurify.sanitize(shortUrl));
         } else {
           setShortLinkMarkup(
-            'The BigRed.link Browser Extension only works on https pages',
+            'The BigRed.link Browser Extension only works on https pages'
           );
         }
       }

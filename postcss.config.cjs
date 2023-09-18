@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-/* eslint-disable no-undef */
 const cssSafelistClassArray = [
   /result-section/,
   /result/,
