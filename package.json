@@ -40,7 +40,7 @@
     "@fortawesome/free-solid-svg-icons": "6.5.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "axios": "1.6.4",
-    "clipboard-polyfill": "4.0.1",
+    "clipboard-polyfill": "4.0.2",
     "dayjs": "1.11.10",
     "dexie": "3.2.4",
     "dompurify": "3.0.7",
