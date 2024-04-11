@@ -42,7 +42,7 @@
     "axios": "1.6.8",
     "clipboard-polyfill": "4.0.2",
     "dayjs": "1.11.10",
-    "dexie": "4.0.2",
+    "dexie": "4.0.4",
     "dompurify": "3.1.0",
     "nanoid": "5.0.7",
     "prop-types": "15.8.1",
