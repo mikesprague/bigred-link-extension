@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as clipboard from 'clipboard-polyfill';
 import dompurify from 'dompurify';
-import React, { lazy, useEffect, useState } from 'react';
+import { atom, useAtom } from 'jotai';
+import React, { lazy, useEffect } from 'react';
 
 import { insertLongUrl, queryForLongUrl } from '../modules/db.js';
 import { buildShortLink, createShortUrl } from '../modules/helpers.js';
@@ -10,8 +11,10 @@ import './Main.scss';
 
 const ShortLink = lazy(() => import('./ShortLink.jsx'));
 
+export const shortLinkAtom = atom('');
+
 export const Main = () => {
-  const [shortLinkMarkup, setShortLinkMarkup] = useState('');
+  const [shortLinkMarkup, setShortLinkMarkup] = useAtom(shortLinkAtom);
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
@@ -66,7 +69,7 @@ export const Main = () => {
         }
       }
     });
-  }, []);
+  }, [setShortLinkMarkup]);
 
   return (
     <main>
