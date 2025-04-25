@@ -39,7 +39,7 @@
     "@fortawesome/free-regular-svg-icons": "6.7.2",
     "@fortawesome/free-solid-svg-icons": "6.7.2",
     "@fortawesome/react-fontawesome": "0.2.2",
-    "axios": "1.8.4",
+    "axios": "1.9.0",
     "clipboard-polyfill": "4.1.1",
     "dayjs": "1.11.13",
     "dexie": "4.0.11",
