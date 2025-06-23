@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">= 20.x",
+    "node": ">= 22.x",
     "npm": ">= 10.x"
   },
   "scripts": {
@@ -51,7 +51,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.1",
+    "@biomejs/biome": "2.0.5",
     "@fullhuman/postcss-purgecss": "7.0.2",
     "@vitejs/plugin-react-swc": "3.10.2",
     "autoprefixer": "10.4.21",
@@ -86,7 +86,7 @@
     }
   },
   "volta": {
-    "node": "22.4.1",
-    "npm": "10.8.1"
+    "node": "24.2.0",
+    "npm": "11.4.2"
   }
 }
