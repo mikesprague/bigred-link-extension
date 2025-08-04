@@ -44,7 +44,7 @@
     "dayjs": "1.11.13",
     "dexie": "4.0.11",
     "dompurify": "3.2.6",
-    "jotai": "2.12.5",
+    "jotai": "2.13.0",
     "nanoid": "5.1.5",
     "prop-types": "15.8.1",
     "react": "19.1.1",
