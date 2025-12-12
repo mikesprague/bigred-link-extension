@@ -64,7 +64,7 @@
     "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
     "stylelint-config-standard-scss": "16.0.0",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "4.1.18",
     "vite": "7.2.7",
     "vite-plugin-html": "3.2.2"
   },
