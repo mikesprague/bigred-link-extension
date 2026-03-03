@@ -69,6 +69,10 @@
     "vite": "7.3.1",
     "vite-plugin-html": "3.2.2"
   },
+  "overrides": {
+    "ajv": "^8.18.0",
+    "minimatch": "^10.2.4"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
