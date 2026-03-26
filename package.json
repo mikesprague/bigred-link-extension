@@ -66,13 +66,13 @@
     "stylelint-config-standard": "40.0.0",
     "stylelint-config-standard-scss": "17.0.0",
     "tailwindcss": "4.2.2",
-    "vite": "8.0.1",
+    "vite": "8.0.3",
     "vite-plugin-html": "3.2.2"
   },
   "overrides": {
     "ajv": "^8.18.0",
     "minimatch": "^10.2.4",
-    "vite": "8.0.1"
+    "vite": "8.0.3"
   },
   "browserslist": {
     "production": [
