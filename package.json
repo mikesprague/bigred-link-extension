@@ -42,7 +42,7 @@
     "@fortawesome/react-fontawesome": "3.3.1",
     "axios": "1.16.1",
     "clipboard-polyfill": "4.1.1",
-    "dayjs": "1.11.20",
+    "dayjs": "1.11.21",
     "dexie": "4.4.2",
     "dompurify": "3.4.5",
     "jotai": "2.20.0",
