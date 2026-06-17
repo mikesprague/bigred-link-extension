@@ -43,7 +43,7 @@
     "axios": "1.18.0",
     "clipboard-polyfill": "4.1.1",
     "dayjs": "1.11.21",
-    "dexie": "4.4.3",
+    "dexie": "4.4.4",
     "dompurify": "3.4.10",
     "jotai": "2.20.1",
     "nanoid": "5.1.11",
