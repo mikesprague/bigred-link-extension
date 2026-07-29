@@ -1,14 +1,22 @@
 {
   "name": "bigred-link-extension",
   "version": "1.2.1",
-  "description": "",
   "private": true,
-  "type": "module",
-  "engines": {
-    "node": ">= 24.x",
-    "npm": ">= 11.x"
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/mikesprague/bigred-link-extension",
+  "bugs": {
+    "url": "https://github.com/mikesprague/bigred-link-extension/issues"
   },
-  "packageManager": "npm@11.12.0",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/mikesprague/bigred-link-extension"
+  },
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "clean": "rm -rf ./build",
@@ -21,26 +29,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "zip": "cd build && zip -r bigred-link-extension.zip ./"
   },
-  "keywords": [],
-  "repository": {
-    "url": "https://github.com/mikesprague/bigred-link-extension"
-  },
-  "author": {
-    "name": "Michael Sprague",
-    "email": "mikesprague@gmail.com"
-  },
-  "homepage": "https://github.com/mikesprague/bigred-link-extension",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mikesprague/bigred-link-extension/issues"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "7.3.1",
     "@fortawesome/free-brands-svg-icons": "7.3.1",
     "@fortawesome/free-regular-svg-icons": "7.3.1",
     "@fortawesome/free-solid-svg-icons": "7.3.1",
     "@fortawesome/react-fontawesome": "3.5.0",
-    "axios": "1.18.1",
+    "axios": "1.19.0",
     "clipboard-polyfill": "4.1.1",
     "dayjs": "1.11.21",
     "dexie": "4.4.4",
@@ -70,9 +65,14 @@
     "vite-plugin-html": "3.2.2"
   },
   "overrides": {
-    "ajv": "^8.18.0",
-    "minimatch": "^10.2.4",
+    "ajv": "^8.20.0",
+    "minimatch": "^10.2.6",
     "vite": "8.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
   },
   "browserslist": {
     "production": [
@@ -86,13 +86,17 @@
       "last 1 safari version"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-git"
-    }
+  "engines": {
+    "node": ">= 24.x",
+    "npm": ">= 11.x"
   },
   "volta": {
-    "node": "25.8.1",
-    "npm": "11.12.0"
+    "node": "26.5.1",
+    "npm": "12.0.1"
+  },
+  "packageManager": "npm@12.0.1",
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "fsevents@2.3.3": true
   }
 }
