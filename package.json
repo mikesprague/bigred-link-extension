@@ -39,7 +39,7 @@
     "clipboard-polyfill": "4.1.1",
     "dayjs": "1.11.21",
     "dexie": "4.4.4",
-    "dompurify": "3.4.12",
+    "dompurify": "3.4.13",
     "jotai": "2.20.2",
     "nanoid": "6.0.1",
     "prop-types": "15.8.1",
