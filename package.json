@@ -37,7 +37,7 @@
     "@fortawesome/react-fontawesome": "3.5.0",
     "axios": "1.19.0",
     "clipboard-polyfill": "4.1.1",
-    "dayjs": "1.11.21",
+    "dayjs": "1.11.22",
     "dexie": "4.4.5",
     "dompurify": "3.4.13",
     "jotai": "2.20.2",
