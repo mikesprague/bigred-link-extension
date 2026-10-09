@@ -41,7 +41,7 @@
     "dexie": "4.4.6",
     "dompurify": "3.4.16",
     "jotai": "3.0.1",
-    "nanoid": "6.0.1",
+    "nanoid": "6.0.2",
     "prop-types": "15.8.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
