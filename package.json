@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.6",
-    "@fullhuman/postcss-purgecss": "9.0.0",
+    "@fullhuman/postcss-purgecss": "9.1.0",
     "@vitejs/plugin-react": "6.2.1",
     "autoprefixer": "10.6.2",
     "cross-env": "10.1.0",
