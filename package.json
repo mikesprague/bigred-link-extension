@@ -47,7 +47,7 @@
     "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.6",
+    "@biomejs/biome": "2.6.7",
     "@fullhuman/postcss-purgecss": "9.1.0",
     "@vitejs/plugin-react": "6.3.0",
     "autoprefixer": "10.6.2",
