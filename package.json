@@ -50,7 +50,7 @@
     "@biomejs/biome": "2.6.8",
     "@fullhuman/postcss-purgecss": "9.1.0",
     "@vitejs/plugin-react": "6.3.0",
-    "autoprefixer": "10.6.2",
+    "autoprefixer": "10.7.0",
     "cross-env": "10.1.0",
     "cssnano": "9.9.0",
     "cz-git": "1.14.0",
